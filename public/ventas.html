@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/principal.css">
+    <link rel="stylesheet" href="/icon-font.css">
+    <title>Rutas de Cobranza</title>
+</head>
+<body>
+    <nav class="navegacion">
+        <div>
+           <a href="/vistas/principal"><i class="bi bi-box-arrow-left"></i></a> 
+        </div>
+        <div>
+           <span>Cobranza App</span>
+        </div>
+        <!--<div>
+            <a href="" class="menuOpciones">Principal</a>
+            <a href="" class="menuOpciones">Cobranza</a>
+            <a href="" class="menuOpciones">Clientes</a>
+            <a href="" class="menuOpciones">Productos</a>
+            <a href="" class="menuOpciones">Novedades</a>
+            <a href="" class="menuOpciones">Calculadora</a>
+            <a href="" class="menuOpciones">Estadisticas</a>
+        </div> -->
+        <div class="iconMenuHamburguesa">
+            <i class="bi bi-menu-button-wide-fill"></i>
+        </div>
+    </nav>
+    <h2 class="tituloTarjetaCliente" >Gestión De Ventas</h2>
+    <div>
+        <form class="formVenta" action="/ventas/cotizar" method="post">
+            <h2>Registrar Ventas</h2>
+            <br>
+            <label for="ruta">Ruta De Cobro</label>
+            <select class="inpForm" name="ruta" id="ruta" required>
+                <option value="1">Emiliano</option>
+                <option value="1">Ramon</option>
+                <option value="1">Javier</option>
+            </select>
+            <br>
+            <label for="dni">DNI</label><br>
+            <input class="inpForm" type="number" id="dni" name="dni" required>
+            <br>
+            <label for="monto">Monto</label>
+            <input class="inpForm" type="number" id="monto" name="monto" required>
+            <br>
+            <label for="cantCuotas">Cantidad De Cutas</label>
+            <input class="inpForm" type="number" id="cantCuotas" name="cantCuotas" required size="8">
+            <br>
+            <label for="interes">Interes</label>
+            <input class="inpForm" type="number" id="interes" name="interes" required>
+            <br>
+            <label for="plan">Plan De Cobro</label>
+            <select class="inpForm" name="plan" id="plan">
+                <option value="Semanal">Semanal</option>
+                <option value="Diario">Diario</option>
+            </select>
+            <br>
+            <label for="diasDeCobro">Dia De Cobro</label>
+            <select class="inpForm" name="diasDeCobro" id="diasDeCobro">
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="Sabado">Sabado</option>
+                <option value="todos">Todos</option>
+            </select>
+            <button class="btnFormReset" type="reset">Limpiar</button>
+            <button class="btnFormAceptar" type="submit">Guardar</button>
+        </form>
+       
+      
+    </div>
+    
+
+    <footer class="footerCobranza">
+            <div class="divFooter">
+                <spam>Nombre Usuario</spam>
+                <spam>Cobrado= $0.0</spam>
+                <spam>Esperado= $0.0</spam>
+            </div>
+    
+            <div class="divFooter">
+              <spam>Fecha: 00/00/00</spam>
+              <spam>Efectividad= 100%</spam>
+              <spam>Adelantos= $0.0</spam>
+            </div>
+    </footer>
+ 
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/principal.css" />
+    <link rel="stylesheet" href="/icon-font.css" />
+    <title>App Cobranza</title>
+  </head>
+  <body>
+    <nav class="navegacion">
+      <a href="/vistas/principal"><i class="bi bi-box-arrow-left"></i></a>
+      <div>
+        <span>Cobranza App</span>
+      </div>
+      <!--<div>
+            <a href="" class="menuOpciones">Principal</a>
+            <a href="" class="menuOpciones">Cobranza</a>
+            <a href="" class="menuOpciones">Clientes</a>
+            <a href="" class="menuOpciones">Productos</a>
+            <a href="" class="menuOpciones">Novedades</a>
+            <a href="" class="menuOpciones">Calculadora</a>
+            <a href="" class="menuOpciones">Estadisticas</a>
+        </div> -->
+      <div class="iconMenuHamburguesa">
+        <i class="bi bi-menu-button-wide-fill"></i>
+      </div>
+    </nav>
+    <h2 class="tituloTarjetaCliente">Usuarios y administradores</h2>
+
+    <div class="contMayorCli">
+      <section class="sectionContClientes">
+        <div class="divClienteBuscar">
+          <input
+            class="inpBuscarClientes"
+            type="text"
+            name=""
+            id=""
+            placeholder="Ingrese un DNI o Nombre"
+          />
+          <button class="btnBuscarCliente"><i class="bi bi-search"></i></button>
+        </div>
+        <div class="tarjCli">
+          <h3 class="nombreCli">Apellido y Nombre</h3>
+          <div class="divInfoCli">
+            <h4>Direccion</h4>
+            <h4>Tipo de comercio: Despensa</h4>
+            <h4>Fecha de Ingreso: 00/00/00</h4>
+            <h4>Calificacion:</h4>
+            <h4>Historial de actividades:</h4>
+          </div>
+          <div class="divBtnCli">
+            <button class="btnWhatsappCliente" type="submit">
+              <i class="bi bi-whatsapp"></i>
+            </button>
+            <button class="btnClienteVender" type="submit">
+              Realiza Operacion
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <form action="/users/crearUsers" method="post" class="formCliente">
+        <h3 class="tituloForm">Registrar usuario</h3>
+        <br />
+        <p>Ingresa los datos para dar de alta al cliente</p>
+        <br />
+
+        <label class="title" for="nombre">Apellido y Nombre</label>
+        <br />
+        <input
+          type="text"
+          class="inpForm"
+          placeholder="Escribe Apellido y Nombre"
+          id="nombre"
+          name="nombre"
+          required
+        />
+        <br />
+        <label class="title" for="dni">DNI</label>
+        <br />
+        <input
+          type="number"
+          class="inpForm"
+          placeholder="Escribe el DNI"
+          id="dni"
+          name="dni"
+          required
+        />
+        <br />
+        <label class="title" for="password">Contraseña</label>
+        <br />
+        <input
+          type="text"
+          class="inpForm"
+          placeholder="Ingrese una Contraseña"
+          id="password"
+          name="password"
+          required
+        />
+        <br />
+        <label for="rol" class="title">Rol del usuario</label>
+        <select class="inpForm" name="rol" id="rol" required>
+          <option value="admin">Administrador</option>
+          <option value="vendedor">Vendedor</option>
+          <option value="cobrador">Cobrador</option>
+        </select>
+
+        <div class="cantBtnForm">
+          <button class="btnFormReset" type="reset">Limpiar</button>
+
+          <button class="btnFormAceptar" type="submit">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

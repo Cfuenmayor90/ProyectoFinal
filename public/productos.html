@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/principal.css">
+    <link rel="stylesheet" href="/icon-font.css">
+    <title>Cobranza</title>
+</head>
+<body>
+    <nav class="navegacion">
+        <div>
+           <a href="/vistas/principal"><i class="bi bi-box-arrow-left"></i></a> 
+        </div>
+        <div>
+           <span>Cobranza App</span>
+        </div>
+        <!--<div>
+            <a href="" class="menuOpciones">Principal</a>
+            <a href="" class="menuOpciones">Cobranza</a>
+            <a href="" class="menuOpciones">Clientes</a>
+            <a href="" class="menuOpciones">Productos</a>
+            <a href="" class="menuOpciones">Novedades</a>
+            <a href="" class="menuOpciones">Calculadora</a>
+            <a href="" class="menuOpciones">Estadisticas</a>
+        </div> -->
+        <div class="iconMenuHamburguesa">
+            <i class="bi bi-menu-button-wide-fill"></i>
+        </div>
+    </nav>
+    <h2 class="tituloTarjetaCliente" >Lista De Productos</h2>
+
+    </div>
+
+    <div class="contBtnsCate">
+        <label for="">Categoria:</label>
+        <select name="" id="">
+            <option value="">Hogar</option>
+            <option value="">Comercial</option>
+            <option value="">Electronica</option>
+            <option value="">Herramientas</option>
+            <option value="">Todo</option>
+        </select>
+    </div>
+
+    <details>
+        <summary class="summaryProd">Agregar Productos</summary>
+        <form class="detailsProd" action="/ventas/cotizar" method="post">
+            <label for="codProd">Codigo</label>
+            <br>
+            <input class="inpForm" type="text" id="codProd" name="codProd" required>
+            <br>
+            <label for="nameProd">Nombre</label>
+            <br>
+            <input class="inpForm" type="text" id="nameProd" name="nameProd" required>
+            <br>
+            <label for="precioProd">Precio</label>
+            <br>
+            <input class="inpForm" type="number" id="precioProd" name="precioProd" required>
+            <br>
+            <label for="cantProd">Cantidad</label>
+            <br>
+            <input class="inpForm" type="number" id="cantProd" name="cantProd">
+            <br>
+            <label for="descProd">Descripción</label>
+            <br>
+            <input class="inpForm" type="text" id="descProd" name="descProd" required>
+            <br>
+            <label for="cateProd">Categoria</label>
+            <br>
+            <select class="inpForm" name="cateProd" id="cateProd">
+                <option value="electronica">Electronica</option>
+                <option value="hogar">Hogar</option>
+                <option value="comercial">Comercial</option>
+                <option value="herramientas">Herramientas</option>
+            </select>
+            <button class="btnFormReset" type="reset">Limpiar</button>
+            <button class="btnFormAceptar" type="submit">Guardar</button>
+        </form>
+    </details>
+
+      <div class="contProduc"  id="contProduc"></div>
+
+</body>
+</html>
