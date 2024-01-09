@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
+const hbs = require('hbs');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 dotenv.config();
 require('./dataBase/conexion');
 
@@ -14,9 +17,15 @@ const clientRoutes = require('./routes/clientRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
  app.use(express.static(path.join(__dirname, 'public')));
- app.use(express.json());
- app.use(express.urlencoded({extended: true}));
+ app.set('view engine', 'hbs');
+ app.set('views', path.join(__dirname, '/views'));
+ app.use(cookieParser());
+ hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
  app.use('/users', usersRoutes);
  app.use('/cobranza', cobranzaRoutes);
@@ -26,7 +35,7 @@ const PORT = process.env.PORT || 8080;
  app.use('/client', clientRoutes);
 
  app.get('/', (req, res) => {
-    res.sendFile('index.html');
+   res.render('index');
  })
 
 
